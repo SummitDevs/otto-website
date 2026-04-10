@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Otto • Discord Moderation Bot</title>
+    <title>Otto • Moderation Bot</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
+<!-- Snow Background -->
+<div class="snow" id="snow"></div>
+
+<header class="glass">
     <h1>Otto</h1>
-    <p>Professional Discord Moderation • Hosted & Managed</p>
+    <p>Modern Discord Moderation • Fully Hosted</p>
+
     <nav>
         <a href="#features">Features</a>
         <a href="#commands">Commands</a>
@@ -20,57 +24,63 @@
     </nav>
 </header>
 
-<section class="hero">
-    <h2>Moderation, Simplified.</h2>
-    <p>Otto provides powerful moderation, intelligent automod, and a complete appeal system — all fully hosted so you don’t have to manage anything.</p>
-    
-    <a class="button" href="https://discord.com/oauth2/authorize?client_id=1491919041785364631">Invite Otto</a>
+<section class="hero glass">
+    <h2>Moderation, Done Right.</h2>
+    <p>
+        Powerful tools. Smart automod. Built-in appeals.
+        Otto keeps your server safe — without you managing anything.
+    </p>
+
+    <div class="buttons">
+        <a class="btn primary" href="YOUR_INVITE_LINK">Invite Otto</a>
+        <a class="btn secondary" href="#features">Learn More</a>
+    </div>
 </section>
 
-<section id="features">
+<section id="features" class="glass">
     <h2>Features</h2>
 
     <div class="grid">
-        <div>
+        <div class="card">
             <h3>🛡️ Moderation</h3>
-            <p>Ban, kick, timeout, warn, unwarn, and purge with full case tracking.</p>
+            <p>Ban, kick, timeout, warn, unwarn, and purge with case tracking.</p>
         </div>
 
-        <div>
+        <div class="card">
             <h3>📩 Appeals</h3>
-            <p>Users can submit appeals via modals. Staff can review and accept or deny with full history.</p>
+            <p>Users can appeal punishments with staff review and decision logging.</p>
         </div>
 
-        <div>
+        <div class="card">
             <h3>📜 Logging</h3>
-            <p>Detailed logs for every moderation action with timestamps and case IDs.</p>
+            <p>Full audit logs for all moderation actions with timestamps.</p>
         </div>
 
-        <div>
+        <div class="card">
             <h3>🤖 Automod</h3>
-            <p>Automatic spam, link, and caps protection with configurable behavior.</p>
+            <p>Anti-spam, anti-links, and anti-caps protection built-in.</p>
         </div>
 
-        <div>
+        <div class="card">
             <h3>⚙️ Custom Prefix</h3>
-            <p>Set your own prefix per server.</p>
+            <p>Customize commands per server easily.</p>
         </div>
 
-        <div>
+        <div class="card">
             <h3>🌐 Multi-Server</h3>
-            <p>Works seamlessly across all your communities.</p>
+            <p>Works across all your communities seamlessly.</p>
         </div>
     </div>
 </section>
 
-<section id="setup">
+<section id="setup" class="glass">
     <h2>Getting Started</h2>
 
     <ol>
         <li>Click <strong>Invite Otto</strong></li>
-        <li>Grant required permissions (Administrator recommended)</li>
-        <li>Set your log channel</li>
-        <li>Start moderating immediately</li>
+        <li>Grant permissions</li>
+        <li>Set a log channel</li>
+        <li>Start moderating</li>
     </ol>
 
     <h3>Recommended Permissions</h3>
@@ -83,45 +93,67 @@
     </ul>
 </section>
 
-<section id="commands">
+<section id="commands" class="glass">
     <h2>Commands</h2>
 
-    <h3>Moderation</h3>
-    <ul>
-        <li><code>ban</code> — Ban a user</li>
-        <li><code>kick</code> — Kick a user</li>
-        <li><code>timeout</code> — Timeout a user</li>
-        <li><code>warn</code> — Warn a user</li>
-        <li><code>unwarn</code> — Remove a warning</li>
-        <li><code>purge</code> — Delete messages</li>
-    </ul>
+    <div class="grid">
+        <div class="card">
+            <h3>Moderation</h3>
+            <ul>
+                <li>ban</li>
+                <li>kick</li>
+                <li>timeout</li>
+                <li>warn / unwarn</li>
+                <li>purge</li>
+            </ul>
+        </div>
 
-    <h3>Appeals</h3>
-    <ul>
-        <li><code>/appeal</code> — Submit an appeal</li>
-    </ul>
+        <div class="card">
+            <h3>Appeals</h3>
+            <ul>
+                <li>/appeal</li>
+            </ul>
+        </div>
 
-    <h3>Configuration</h3>
-    <ul>
-        <li><code>prefix</code> — Change bot prefix</li>
-    </ul>
+        <div class="card">
+            <h3>Config</h3>
+            <ul>
+                <li>prefix</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
-<section>
+<section class="glass">
     <h2>Screenshots</h2>
     <p>Coming soon.</p>
 </section>
 
-<section>
+<section class="glass">
     <h2>Support</h2>
     <p>Email: your@email.com</p>
     <p>Discord: your server link</p>
     <p>GitHub: repo link</p>
 </section>
 
-<footer>
-    <p>© 2026 Otto • All rights reserved</p>
+<footer class="glass">
+    <p>© 2026 Otto Developers</p>
 </footer>
+
+<!-- Snow Script -->
+<script>
+const snowContainer = document.getElementById("snow");
+
+for (let i = 0; i < 100; i++) {
+    const snowflake = document.createElement("span");
+
+    snowflake.style.left = Math.random() * 100 + "vw";
+    snowflake.style.animationDuration = (5 + Math.random() * 5) + "s";
+    snowflake.style.opacity = Math.random();
+
+    snowContainer.appendChild(snowflake);
+}
+</script>
 
 </body>
 </html>
